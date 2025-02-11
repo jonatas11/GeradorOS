@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ordem de Serviço | Gutierres</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <img src="/img/Logo.png" id="logotipo" alt="Logo" />
+
+    <h3>GERAR ORDEM DE SERVIÇO</h3>
+
+    <!-- Formulário -->
+    <form id="pdfForm">
+      <input type="text" id="clientName" placeholder="Nome do Cliente" required>
+      <input type="text" id="vehicle" placeholder="Veículo" required>
+      <input type="number" id="year" placeholder="Ano do Veículo" value="2000" required>
+
+      <!-- peças utilizadas -->
+      <div id="partsUsedSection">
+        <h3>Peças Utilizadas</h3>
+        <table id="partsTable">
+          <thead>
+            <tr>
+              <th id="thQtd">Qtde</th>
+              <th id="thPart">Peça</th>
+              <th id="thAction">Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Linhas serão adicionadas aqui -->
+          </tbody>
+        </table>
+        <button type="button" id="addPartButton">Adicionar Peça</button>
+      </div>
+
+      <textarea id="labor" placeholder="Observação" required></textarea>
+      <input type="number" id="totalCost" placeholder="Valor Total (R$)" step="0.01" required>
+      <button type="button" id="generatePDF">Gerar PDF</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
