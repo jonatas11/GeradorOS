@@ -3,9 +3,10 @@ body {
   background-color: #f4f4f9;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 100vh;
   margin: 0;
+  overflow-y: auto; /* Habilita rolagem vertical */
 }
 
 .container {
@@ -15,6 +16,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 350px;
+  overflow-x: auto; /* Permite rolagem horizontal se necessário */
 }
 
 form {
@@ -30,6 +32,7 @@ input, textarea {
   border: 1px solid #ddd;
   border-radius: 5px;
   resize: none;
+  box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos no cálculo da largura total */
 }
 
 textarea {
@@ -37,7 +40,7 @@ textarea {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #2196F3;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -47,7 +50,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #1976D2;
 }
 
 #partsUsedSection {
@@ -58,11 +61,14 @@ button:hover {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 10px;
+  table-layout: fixed; /* Controla o layout das colunas */
+  word-wrap: break-word; /* Quebra palavras longas para evitar o overflow */
 }
 
 #partsTable th, #partsTable td {
   padding: 8px;
   border: 1px solid #ddd;
+  text-align: center; /* Alinha o texto ao centro para uma melhor aparência */
 }
 
 #partsTable th {
@@ -70,7 +76,8 @@ button:hover {
 }
 
 #partsTable input {
-  width: 80px;
+  width: 100%; /* Garante que os inputs preencham a largura da célula */
+  box-sizing: border-box; /* Inclui o padding no cálculo da largura */
 }
 
 #partsTable button {
@@ -91,3 +98,22 @@ button:hover {
   max-width: 100%;
 }
 
+#totalPart {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#generatePDF {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#generatePDF:hover {
+  background-color: #1976D2;
+}

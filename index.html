@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,7 @@
       <input type="text" id="vehicle" placeholder="Veículo" required>
       <input type="number" id="year" placeholder="Ano do Veículo" value="2000" required>
 
-      <!-- peças utilizadas -->
+      <!-- Peças Utilizadas -->
       <div id="partsUsedSection">
         <h3>Peças Utilizadas</h3>
         <table id="partsTable">
@@ -28,6 +28,7 @@
             <tr>
               <th id="thQtd">Qtde</th>
               <th id="thPart">Peça</th>
+              <th id="thValue">Valor (R$)</th>
               <th id="thAction">Ação</th>
             </tr>
           </thead>
@@ -37,9 +38,11 @@
         </table>
         <button type="button" id="addPartButton">Adicionar Peça</button>
       </div>
-
+      
+      <input type="number" id="totalPart" placeholder="Valor total das peças (R$)" step="0.01" readonly>
+      <input type="number" id="totalMDO" placeholder="Valor da mão de obra (R$)" step="1" value="100" required>
       <textarea id="labor" placeholder="Observação" required></textarea>
-      <input type="number" id="totalCost" placeholder="Valor Total (R$)" step="0.01" required>
+      
       <button type="button" id="generatePDF">Gerar PDF</button>
     </form>
   </div>
