@@ -29,7 +29,7 @@ document.getElementById("addPartButton").addEventListener("click", () => {
   valueInput.type = "number";
   valueInput.placeholder = "Preço";
   valueInput.step = "1";
-  valueInput.value = 100;
+  valueInput.value = 0;
   valueInput.required = true;
   valueInput.addEventListener("input", updateTotal); // Atualiza o total quando alterado
   valueCell.appendChild(valueInput);
