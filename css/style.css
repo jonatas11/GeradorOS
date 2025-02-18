@@ -99,9 +99,17 @@ button:hover {
 }
 
 #totalPart {
-  text-align: right;
+  text-align: left;
   font-weight: bold;
   margin-top: 10px;
+}
+
+#labor {
+  font-weight: bold;
+}
+
+#totalMDO {
+  font-weight: bold;
 }
 
 #generatePDF {
